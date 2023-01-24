@@ -1,82 +1,358 @@
-<!DOCTYPE html>
 <html>
-<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/><link href="https://feeldreams.github.io/singkat/style.css" rel="stylesheet" type="text/css" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5" name="viewport" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
-  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
-  
-<head>
-<title>Rubii Birthday</title>
-</head>
-<body>
-	
-   <!-- Ganti Audio di sini -->
-   <audio src="https://rubiibirthday.github.io/audio.mp3" id="linkmp3" class="sembunyi"></audio>
-   
-   <div id="bodyblur">
-     <!-- Wallpaper --><img src="https://feeldreams.github.io/wp4.jpg" id="wallpaper"/><div id="beneranblur"></div>
-   </div>
-   
-   <div id='Content'>
+  <head>
+    <!-- Judul untuk Browser -->
+    <title>Buat Ayangg Rubii <3</title>
+  </head>
+  <audio src="https://docs.google.com/uc?export=download&id=1oILzK2s5XSZZ21w3bvQrPg9TBOYzqxgy" type="audio/mpeg" controls autoplay loop></audio>
 
-     <div id="kadoIn">
-       <!-- Tombol Surat --><img src="https://feeldreams.github.io/kadoin.png"/>
-     </div>
-     <p id="ket">Klik Kadonya!</p>
+  <body>
+    <style>
+      body {
+        background-color: #1e1e1e;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: "Quicksand", sans-serif;
+        padding: 25px;
+      }
+      #geser {
+        opacity: 0.8;
+        color: #ffffff;
+        margin-top: 12px;
+      }
 
-     <div class="kumpulanstiker">
-         <!-- Stiker untuk Konten -->
-         <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker"/>
-         <img src="https://feeldreams.github.io/g5.gif" id="fotostiker2"/>
-         <img src="https://feeldreams.github.io/mndkat.gif" id="fotostiker3"/>
-         <img src="https://feeldreams.github.io/ywdh.gif" id="fotostiker4"/>
-         <img src="https://feeldreams.github.io/ngumpet.gif" id="fotostiker5"/>
-         <img src="https://feeldreams.github.io/smprt.gif" id="fotostiker6"/>
-         <img src="https://feeldreams.github.io/ciumin.gif" id="fotostiker7"/>
-     </div>
-     <p id="halo" class="halo">Hai, Kamu!</p>
-     <!-- Konten Pesan Setelah Aksi -->
-     <p id="halo2" class="halo">Sekian ✨</p>
-     
-     <!-- Konten Pesan Akhir -->
-     <p id="kalimatbawah">I Love You ❤️</p> 
-     <p id="kalimatbawah2" class="sembunyi">Semangat Terus yaa ❤️</p> 
-     <p id="kalimatbawah3" class="sembunyi">Aku Sayang Kamu ❤️</p>
-       
-     <div><blockquote id='bq' data-text='&#9829;'>
+      @keyframes leaves {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0.8);
+        }
+      }
+      #lope,
+      #lopdeg {
+        animation: leaves 1s ease-in-out infinite alternate;
+        -webkit-animation: leaves 1s ease-in-out infinite alternate;
+      }
 
-       <!-- Konten Pembukaan -->
-       <p id="kalimat">Aku Mau Nitip Pesan Nih...</p>
-       <p id="kalimatb">Makasii ya Udah Nemenin Aku Sampai Sejauh Ini ❤️</p>
-       <p id="kalimatc">Aku Bahagia Banget Bisa Dapetin Kamu.. ☺️</p>
-       <p id="kalimatd">Kamu Jangan Pergi yaa.. 🥺</p>
-       <p id="kalimate">Tetap Sama Aku Terus.. 🥺</p>
-       <p id="kalimatf">Gabole Sama yang Lain 🤬</p>
-       
-       <p id="opsL">Klik untuk Lanjut</p>
-       
-     </blockquote></div>
+      .scrollImage p {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .scrollImage {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        width: calc(100%);
+        left: -20px;
+        padding: 0 20px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .scrollImage > * {
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        flex-shrink: 0;
+        width: 90%;
+        height: 30vh;
+        background: #ffffff;
+        margin: 0 15px 0 0;
+        scroll-snap-align: center;
+      }
+      .scrollImage > *:last-child {
+        margin-right: 0;
+      }
+      .scrollImage:after {
+        content: "";
+        display: block;
+        flex-shrink: 0;
+        align-self: stretch;
+        padding-left: 20px;
+      }
 
-     <!-- Tombol Kirim Pesan -->
-     <div id="Tombol"><a id="By">&#128140; Balas</a></div>
+      /* Teks Ganjil */
+      .scrollImage p:nth-child(odd) {
+        color: #0b1600;
+      }
+      /* Teks Genap */
+      .scrollImage p:nth-child(even) {
+        color: #000d8a;
+      }
+      #wrn1 {
+        color: #c600c3;
+      }
+      #wrn2 {
+        color: #3d7a00;
+      }
 
-     <!-- Pesan yang dikirim ke WhatsApp -->
-     <span id="pesanWA" class="sembunyi">Aww, GoodNight too!</span>
-     
-   </div>
+      blockquote {
+        position: relative;
+        opacity: 0.8;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 30px 25px;
+      }
+      blockquote {
+        color: #fefefe;
+        font-size: 15px;
+        padding: 30px 25px 30px 45px;
+        border: 1px solid #97999a;
+        border-left: 0;
+        border-right: 0;
+      }
+      blockquote:before {
+        content: "\201D";
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: normal;
+      }
 
-<!-- Jangan Edit Bagian Ini --><script>
-  const body = document.querySelector("body");inikuis=0;ftganti=0;flag=1;flagg=1;fungsi=0;ftfungsi=0;fungsiAwal=0;fungsitimer=0;vketikhalo=halo.innerHTML;halo.innerHTML = "";vketikhalo2=halo2.innerHTML;halo2.innerHTML = "";pesanwhatsapp = pesanWA.innerHTML;deffotostiker=fotostiker.src;audio = new Audio('' + linkmp3.src);Content.style = "opacity:1;margin-top:16vh;";const swalst = Swal.mixin({timer: 2777, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90,}); const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 100, imageHeight: 100,}); const style = document.createElement('style'); var today = new Date();var dd = String(today.getDate()).padStart(2, '0');var mm = String(today.getMonth() + 1).padStart(2, '0');var yyyy = today.getFullYear();const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;
-  function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);
-  async function menuju(){window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;} document.getElementById("kadoIn").onclick = function() {if(fungsiAwal==0){audio.play();fungsiAwal=1;kadoIn.style="transition:all .8s ease;transform:scale(10);opacity:0";wallpaper.style="transform: scale(1.5);";ket.style="display:none";setTimeout(mulainama,700)}}
-</script>
-<script src="https://feeldreams.github.io/singkat/script.js"></script>
-<!-- Sampai Sini -->
-</body>
+      .lovein {
+        background-color: #ffffff;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.1s ease;
+      }
+      .lovein:hover,
+      .foto img:hover {
+        transform: scale(1.2);
+      }
+      .lovein svg {
+        width: 30px;
+        height: 30px;
+        fill: #fefefe;
+      }
+
+      .foto,
+      .content2 {
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 150px;
+        margin-top: 50px;
+      }
+      .foto > *,
+      .content2 > * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        font-size: 18px;
+        color: white;
+      }
+      .foto img {
+        border-radius: 50%;
+        transition: all 0.1s ease;
+      }
+
+      .icon {
+        flex-shrink: 0;
+        display: inline-block;
+        margin-right: 12px;
+        width: 18px;
+        height: 18px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .icon.whatsapp {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='%23fefefe'><g><path d='M16,2A13,13,0,0,0,8,25.23V29a1,1,0,0,0,.51.87A1,1,0,0,0,9,30a1,1,0,0,0,.51-.14l3.65-2.19A12.64,12.64,0,0,0,16,28,13,13,0,0,0,16,2Zm0,24a11.13,11.13,0,0,1-2.76-.36,1,1,0,0,0-.76.11L10,27.23v-2.5a1,1,0,0,0-.42-.81A11,11,0,1,1,16,26Z'/><path d='M19.86,15.18a1.9,1.9,0,0,0-2.64,0l-.09.09-1.4-1.4.09-.09a1.86,1.86,0,0,0,0-2.64L14.23,9.55a1.9,1.9,0,0,0-2.64,0l-.8.79a3.56,3.56,0,0,0-.5,3.76,10.64,10.64,0,0,0,2.62,4A8.7,8.7,0,0,0,18.56,21a2.92,2.92,0,0,0,2.1-.79l.79-.8a1.86,1.86,0,0,0,0-2.64Zm-.62,3.61c-.57.58-2.78,0-4.92-2.11a8.88,8.88,0,0,1-2.13-3.21c-.26-.79-.25-1.44,0-1.71l.7-.7,1.4,1.4-.7.7a1,1,0,0,0,0,1.41l2.82,2.82a1,1,0,0,0,1.41,0l.7-.7,1.4,1.4Z'/></g></svg>");
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
+        margin-left: -500%;
+        transition: all 0.5s ease;
+        padding: 10px 15px;
+        outline: 0;
+        border: 0;
+        border-radius: 2px;
+        line-height: 20px;
+        color: #fefefe;
+        background-color: var(--link-bg);
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+      }
+      .button.whatsapp {
+        background-color: #199046;
+      }
+    </style>
+
+    <div class="foto">
+      <div class="image" onClick="iloveu();"><img src="https://i.ibb.co/x3v6vdf/Pics-Art-08-24-06-42-22.jpg" width="120px" height="120px" /></div>
+      <span id="sp1"
+        >Rubii Budiman
+        <div id="lope" class="leaves" style="display: inline-block; align-items: center; justify-content: center">&#9829;</div></span
+      >
+      <span id="sp2" style="display: none"
+        >I Love U So Much Sayangg
+        <div id="lope" class="leaves" style="display: inline-block; align-items: center; justify-content: center">&#9829;</div></span
+      >
+    </div>
+
+    <div id="Content" style="display: none">
+      <blockquote>
+        <p id="text"></p>
+        <p id="text2" style="font-size: 10px; text-align: right; opacity: 0.7"></p>
+      </blockquote>
+      <a id="whs" class="button whatsapp" href="https://drive.google.com/drive/folders/1ubWn0jRsUhbPo621V3rJcXL34rQq4PFZ?usp=sharing"><i class="icon whatsapp"></i>Klik tombol ini bul</a>
+    </div>
+
+    <div id="tombo" class="content2">
+      <div id="lopdeg" class="ct1"><label class="lovein" onClick="mulai();nonTo()">&#10084;&#65039;</label></div>
+      <p style="opacity: 0.7; font-size: 10px; color: white">Pencet Love-nya yangg</p>
+    </div>
+
+    <script>
+      function nonTo() {
+        document.getElementById("tombo").style.display = "none";
+      }
+      function showTo() {
+        document.getElementById("tombo").style.display = "block";
+      }
+      function nonDiv() {
+        document.getElementById("Content").style.display = "none";
+      }
+      function showDiv() {
+        document.getElementById("Content").style.display = "block";
+      }
+      function whtsp() {
+        document.getElementById("whs").style.margin = "12px 12px 12px 0";
+      }
+      function iloveu() {
+        if (u == text2.length) {
+          document.getElementById("sp1").style.display = "none";
+          document.getElementById("sp2").style.display = "block";
+          document.getElementById("text2").style.display = "none";
+        }
+      }
+
+      var i = 0,
+        text;
+      text = "Kamu tau ga gilang bagong bekbekbekbek pernah berkata : Hitung hidupmu dari tawa, bukan air mata. Hitung usiamu dari pertemanan, bukan tahun. Selamat ulang tahun bul..";
+      var u = 0,
+        text2;
+      text2 = "Coba klik fotonyaa!";
+
+      function ketik() {
+        if (i < text.length) {
+          document.getElementById("text").innerHTML += text.charAt(i);
+          i++;
+
+          setTimeout(ketik, 100);
+        }
+        if (i == text.length) {
+          ketikk();
+        }
+      }
+      function ketikk() {
+        if (u < text2.length) {
+          document.getElementById("text2").innerHTML += text2.charAt(u);
+          u++;
+          setTimeout(ketikk, 200);
+        }
+        if (u == text2.length) {
+          whtsp();
+        }
+      }
+    </script>
+
+    <!-- Ini JS agar Tombolnya berjalan sesuai perintah -->
+    <script type="text/javascript">
+      const author = "Abang";
+      const swals = Swal.mixin({
+        cancelButtonColor: "#909090",
+        confirmButtonColor: "#00B487",
+      });
+      async function mulai() {
+        var { value: nama } = await swals.fire({
+          title: "Masukin nama ayangg",
+          input: "text",
+          showCancelButton: false,
+        });
+        if (nama) {
+          var { isConfirmed: sayang } = await swals.fire({
+            title: `${nama} hari ini ulang tahun yaa?`,
+            confirmButtonText: "Iyaa betul",
+            cancelButtonText: "Gk tuhh",
+            showCancelButton: true,
+          });
+          if (sayang) {
+            var { value: persen } = await swals.fire({
+              title: "Pengen tau dong bahagianya segimana?",
+              icon: "question",
+              input: "range",
+              inputLabel: "Antara 0-100% ya",
+              inputAttributes: {
+                min: 80,
+                max: 100,
+              },
+              allowOutsideClick: false,
+              inputValue: 80,
+            });
+            if (persen >= 80) {
+              await swals.fire(`Yeayy baguuss alhamdulillah, kalo bahagianya udah ${persen}% mah`);
+              var { isConfirmed: kangen } = await swals.fire({
+                title: `Terus sekarang ${nama} rindu ${author} ngga? :D`,
+                confirmButtonText: "Bangeettt",
+                cancelButtonText: "Gak, B aja tuh.",
+                showCancelButton: true,
+              });
+              if (kangen) {
+                await swals.fire(`${author} cuma mau ngucapin sesuatu...`);
+                await swals.fire("Sblmnya makasih udah buka web ini");
+                await swals.fire(`${author} harap ${nama} suka dengan ucapan singkat ini`);
+
+                ketik();
+                showDiv();
+              } else {
+                //gak kangen
+                await swals.fire("Yahhhh, kirain rindu :(");
+                showTo();
+              }
+            }
+          } else {
+            //gak sayang
+            await swals.fire("Yahh. Sedih :(");
+            await swals.fire("Yaudah deh");
+            await swals.fire("Semoga harimu indah &#10084;&#65039;");
+            showTo();
+          }
+        } else {
+          await swals.fire("Isi namanya Sayaangg!!");
+          await swals.fire("Gak boleh kosong");
+          mulai();
+        }
+      }
+    </script>
+  </body>
 </html>
